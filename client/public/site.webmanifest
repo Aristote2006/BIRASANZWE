@@ -1,0 +1,10 @@
+{
+  "name": "Birasanzwe Initiative",
+  "short_name": "Birasanzwe",
+  "description": "Disability is not inability. Every talent deserves a platform.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#083F3B",
+  "theme_color": "#083F3B",
+  "icons": [{ "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}

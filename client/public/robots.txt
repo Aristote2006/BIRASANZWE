@@ -1,0 +1,6 @@
+# Birasanzwe Initiative
+# TODO(SEO): replace https://www.example.org with the official production domain.
+User-agent: *
+Allow: /
+
+Sitemap: https://www.example.org/sitemap.xml

@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
+    <!-- Primary SEO -->
+    <title>Birasanzwe Initiative | Disability Is Not Inability</title>
+    <meta
+      name="description"
+      content="Birasanzwe Initiative promotes inclusion, talent, dignity, and opportunities for people with disabilities in Rwanda. Every talent deserves a platform."
+    />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content="#083F3B" />
+    <meta name="color-scheme" content="light" />
+
+    <!-- TODO(SEO): replace https://www.example.org with the official production domain
+         (also in public/robots.txt, public/sitemap.xml and the JSON-LD below). -->
+    <link rel="canonical" href="https://www.example.org/" />
+
+    <!-- Official favicon & web app manifest -->
+    <link rel="icon" href="/assets/logos/logo6.webp" type="image/webp" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Google Fonts: Satisfy (used strictly for the subtle footer developer credit, loaded asynchronously) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" />
+    </noscript>
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Birasanzwe Initiative" />
+    <meta property="og:title" content="Birasanzwe Initiative | Disability Is Not Inability" />
+    <meta
+      property="og:description"
+      content="Promoting inclusion, talent, dignity, and opportunities for people with disabilities in Rwanda. Every talent deserves a platform."
+    />
+    <meta property="og:url" content="https://www.example.org/" />
+    <meta property="og:locale" content="en_US" />
+    <!-- TODO(assets): add a 1200×630 JPG/PNG share image, then enable:
+    <meta property="og:image" content="https://www.example.org/assets/images/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Birasanzwe Initiative — Disability Is Not Inability" />
+    -->
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Birasanzwe Initiative | Disability Is Not Inability" />
+    <meta
+      name="twitter:description"
+      content="Promoting inclusion, talent, dignity, and opportunities for people with disabilities in Rwanda."
+    />
+    <!-- <meta name="twitter:image" content="https://www.example.org/assets/images/og-image.jpg" /> -->
+    <!-- <meta name="twitter:site" content="@official_handle" /> -->
+
+    <!-- Structured data: only verified facts (name, slogan, country focus). -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://www.example.org/#organization",
+            "name": "Birasanzwe Initiative",
+            "alternateName": "BIRASANZWE INITIATIVE",
+            "url": "https://www.example.org/",
+            "logo": "https://www.example.org/assets/logos/logo6.webp",
+            "slogan": "Disability Is Not Inability.",
+            "description": "Birasanzwe Initiative promotes inclusion, talent, dignity, and opportunities for people with disabilities in Rwanda.",
+            "areaServed": { "@type": "Country", "name": "Rwanda" }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://www.example.org/#website",
+            "name": "Birasanzwe Initiative",
+            "url": "https://www.example.org/",
+            "inLanguage": "en",
+            "publisher": { "@id": "https://www.example.org/#organization" }
+          }
+        ]
+      }
+    </script>
+
+    <style>
+      /* Critical inline style: paint the brand background before CSS loads (avoids white flash). */
+      html { background: #083f3b; }
+      body { margin: 0; background: #ffffff; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>
+      <div style="padding:2rem;font-family:system-ui,sans-serif;background:#083f3b;color:#fff">
+        <h1 style="margin:0 0 .5rem">Birasanzwe Initiative</h1>
+        <p style="margin:0">Disability is not inability. Please enable JavaScript to view the full website.</p>
+      </div>
+    </noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

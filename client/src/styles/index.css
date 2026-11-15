@@ -1,0 +1,204 @@
+/* ==========================================================================
+   BIRASANZWE INITIATIVE — Global styles & design tokens
+   Tailwind CSS v4: tokens are declared in @theme and exposed both as
+   utilities (bg-teal, text-gold, font-display …) and CSS variables.
+   ========================================================================== */
+
+/* Self-hosted fonts — only the weights/styles actually used (latin subset). */
+@import '@fontsource/dm-serif-display/latin-400.css';
+@import '@fontsource/playfair-display/latin-400-italic.css';
+@import '@fontsource-variable/manrope/wght.css';
+
+@import 'tailwindcss';
+
+@theme {
+  /* ---- Official brand palette ---- */
+  --color-teal: #0f766e; /* Primary Teal  */
+  --color-teal-dark: #115e59; /* Dark Teal     */
+  --color-teal-deep: #083f3b; /* Deep Teal     */
+  --color-gold: #f4c430; /* Golden Yellow */
+  --color-mist: #f3f4f6; /* Light Gray    */
+  --color-white: #ffffff; /* White         */
+  --color-charcoal: #1f2937; /* Charcoal      */
+
+  /* Derived tints (used sparingly for borders / subtle surfaces) */
+  --color-teal-50: #ecf6f5;
+  --color-teal-100: #d3ebe8;
+  --color-gold-soft: #fbe9a8;
+  --color-ink-muted: #4b5563; /* secondary text on light (7.5:1 on white) */
+  --color-on-dark-muted: #c9dedb; /* secondary text on deep teal (≈10:1) */
+
+  /* ---- Typography ---- */
+  --font-display: 'DM Serif Display', 'Times New Roman', Georgia, serif;
+  --font-sans: 'Manrope Variable', 'Manrope', ui-sans-serif, system-ui, -apple-system, 'Segoe UI',
+    Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-quote: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-satisfy: 'Satisfy', cursive;
+
+  /* Fluid type scale (min @ 360px → max @ 1440px) */
+  --text-hero: clamp(2.15rem, 0.85rem + 5.8vw, 5.25rem);
+  --text-hero--line-height: 1;
+  --text-h2: clamp(1.75rem, 1.3rem + 1.8vw, 2.75rem);
+  --text-h2--line-height: 1.12;
+  --text-h3: clamp(1.25rem, 1.1rem + 0.8vw, 1.75rem);
+  --text-h3--line-height: 1.2;
+  --text-lead: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  --text-lead--line-height: 1.6;
+  --text-quote: clamp(1.15rem, 1rem + 0.75vw, 1.5rem);
+  --text-quote--line-height: 1.45;
+  --text-eyebrow: 0.725rem;
+  --text-eyebrow--line-height: 1.4;
+  --text-eyebrow--letter-spacing: 0.2em;
+
+  /* ---- Motion ---- */
+  --ease-premium: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* ---- Layout ---- */
+  --container-site: 78rem; /* 1248px */
+  --spacing-nav: 4.5rem;
+
+  --animate-marquee: marquee var(--marquee-duration, 40s) linear infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+    to {
+      transform: translate3d(-50%, 0, 0);
+    }
+  }
+}
+
+/* ---- Base ---- */
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--spacing-nav) + 1rem);
+  }
+
+  body {
+    @apply bg-white font-sans text-charcoal;
+    font-size: 1rem;
+    line-height: 1.7;
+    overflow-x: clip;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background: var(--color-gold);
+    color: var(--color-teal-deep);
+  }
+
+  /* Visible, consistent focus indicator (WCAG 2.2 — 2.4.7 / 2.4.11) */
+  :focus-visible {
+    outline: 3px solid var(--color-gold);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  .on-light :focus-visible,
+  .on-light:focus-visible {
+    outline-color: var(--color-teal);
+  }
+
+  [hidden] {
+    display: none !important;
+  }
+}
+
+/* ---- Components / utilities ---- */
+@layer components {
+  .eyebrow {
+    @apply font-sans text-eyebrow font-bold uppercase;
+  }
+
+  .section-y {
+    padding-block: clamp(3rem, 2.25rem + 3vw, 5rem);
+  }
+
+  /* Marquee mask: soft fade on both edges */
+  .marquee-mask {
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+    mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+  }
+
+  .marquee-track:hover,
+  .marquee-track:focus-within {
+    animation-play-state: paused;
+  }
+
+  /* Hero entrance — CSS only (no JS needed, transform + opacity). */
+  .hero-rise {
+    animation: hero-rise 0.9s var(--ease-premium) both;
+  }
+
+  .hero-bob {
+    animation: hero-bob 2.4s ease-in-out infinite;
+  }
+}
+
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes hero-bob {
+  0%,
+  100% {
+    transform: translateY(-2px);
+  }
+  50% {
+    transform: translateY(3px);
+  }
+}
+
+/* ---- Reduced motion: disable non-essential motion everywhere ---- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .marquee-track {
+    animation: none !important;
+    transform: none !important;
+    width: auto !important;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .marquee-track [data-duplicate] {
+    display: none;
+  }
+
+  .marquee-mask {
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+}
