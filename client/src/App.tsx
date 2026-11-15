@@ -1,13 +1,23 @@
+import { lazy } from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router'
 import { LazyMotion, MotionConfig, domAnimation } from 'motion/react'
 import { RootLayout } from '@/components/layout/RootLayout'
 import Home from '@/pages/Home'
 
+const About = lazy(() => import('@/pages/About'))
+const Projects = lazy(() => import('@/pages/Projects'))
+const RwandaTourEdition1 = lazy(() => import('@/pages/RwandaTourEdition1'))
+const Impact = lazy(() => import('@/pages/Impact'))
+const GetInvolved = lazy(() => import('@/pages/GetInvolved'))
+const SupportUs = lazy(() => import('@/pages/SupportUs'))
+const Contact = lazy(() => import('@/pages/Contact'))
+const ComingSoon = lazy(() => import('@/pages/ComingSoon'))
+
 /**
  * Routing.
  * - Home is bundled eagerly (it is the landing page / LCP).
- * - Every other route is code-split and currently renders the lightweight
- *   ComingSoon placeholder until each page is developed in its own stage.
+ * - Secondary pages use React.lazy wrapped in RootLayout's <Suspense>,
+ *   avoiding data-router hydration issues on direct page refresh.
  */
 const router = createBrowserRouter([
   {
@@ -15,54 +25,18 @@ const router = createBrowserRouter([
     Component: RootLayout,
     children: [
       { index: true, Component: Home },
-      {
-        path: 'about',
-        lazy: async () => ({ Component: (await import('@/pages/About')).default }),
-      },
-      {
-        path: 'projects',
-        lazy: async () => ({ Component: (await import('@/pages/Projects')).default }),
-      },
-      {
-        path: 'projects/birasanzwe-rwanda-tour-edition-1',
-        lazy: async () => ({ Component: (await import('@/pages/RwandaTourEdition1')).default }),
-      },
-      {
-        path: 'projects/birasanzwe-rwanda-tour',
-        lazy: async () => ({ Component: (await import('@/pages/RwandaTourEdition1')).default }),
-      },
-      {
-        path: 'impact',
-        lazy: async () => ({ Component: (await import('@/pages/Impact')).default }),
-      },
-      {
-        path: 'get-involved',
-        lazy: async () => ({ Component: (await import('@/pages/GetInvolved')).default }),
-      },
-      {
-        path: 'get-involved/partner',
-        lazy: async () => ({ Component: (await import('@/pages/GetInvolved')).default }),
-      },
-      {
-        path: 'get-involved/volunteer',
-        lazy: async () => ({ Component: (await import('@/pages/GetInvolved')).default }),
-      },
-      {
-        path: 'support-us',
-        lazy: async () => ({ Component: (await import('@/pages/SupportUs')).default }),
-      },
-      {
-        path: 'contact',
-        lazy: async () => ({ Component: (await import('@/pages/Contact')).default }),
-      },
-      {
-        path: 'contact-us',
-        lazy: async () => ({ Component: (await import('@/pages/Contact')).default }),
-      },
-      {
-        path: '*',
-        lazy: async () => ({ Component: (await import('@/pages/ComingSoon')).default }),
-      },
+      { path: 'about', Component: About },
+      { path: 'projects', Component: Projects },
+      { path: 'projects/birasanzwe-rwanda-tour-edition-1', Component: RwandaTourEdition1 },
+      { path: 'projects/birasanzwe-rwanda-tour', Component: RwandaTourEdition1 },
+      { path: 'impact', Component: Impact },
+      { path: 'get-involved', Component: GetInvolved },
+      { path: 'get-involved/partner', Component: GetInvolved },
+      { path: 'get-involved/volunteer', Component: GetInvolved },
+      { path: 'support-us', Component: SupportUs },
+      { path: 'contact', Component: Contact },
+      { path: 'contact-us', Component: Contact },
+      { path: '*', Component: ComingSoon },
     ],
   },
 ])

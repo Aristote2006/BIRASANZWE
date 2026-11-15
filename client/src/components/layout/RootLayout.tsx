@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { Suspense, useEffect } from 'react'
 import { Outlet, useLocation } from 'react-router'
 import { Navbar } from '@/components/navigation/Navbar'
 import { FloatingWhatsAppButton } from '@/components/ui/FloatingWhatsAppButton'
@@ -23,6 +23,19 @@ function ScrollManager() {
   return null
 }
 
+function PageFallback() {
+  return (
+    <div
+      role="status"
+      aria-live="polite"
+      aria-label="Loading page"
+      className="flex min-h-[68svh] items-center justify-center bg-teal-deep text-white"
+    >
+      <span className="size-9 animate-spin rounded-full border-2 border-gold/30 border-t-gold" />
+    </div>
+  )
+}
+
 export function RootLayout() {
   return (
     <>
@@ -35,7 +48,9 @@ export function RootLayout() {
       <ScrollManager />
       <Navbar />
       <main id="main" tabIndex={-1} className="outline-none">
-        <Outlet />
+        <Suspense fallback={<PageFallback />}>
+          <Outlet />
+        </Suspense>
       </main>
       <Footer />
       <FloatingWhatsAppButton />
