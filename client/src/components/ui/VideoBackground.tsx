@@ -132,10 +132,11 @@ export function VideoBackground({
           autoPlay
           loop
           playsInline
-          preload="metadata"
+          preload="auto"
           disablePictureInPicture
           disableRemotePlayback
           tabIndex={-1}
+          onLoadedData={() => setReady(true)}
           onPlaying={() => setReady(true)}
         >
           {webm && <source src={webm} type="video/webm" />}

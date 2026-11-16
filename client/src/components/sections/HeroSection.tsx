@@ -56,10 +56,10 @@ export function HeroSection() {
         objectPositionClassName="object-[65%_center] md:object-center"
       />
 
-      {/* Legibility overlay (also keeps real video subdued and on-brand) */}
+      {/* Legibility overlay (keeps text clear while showcasing the background video) */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(8,63,59,0.92)_0%,rgba(8,63,59,0.55)_55%,rgba(8,63,59,0.2)_100%),linear-gradient(0deg,rgba(8,63,59,0.95)_0%,transparent_45%)]"
+        className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(8,63,59,0.84)_0%,rgba(8,63,59,0.48)_55%,rgba(8,63,59,0.18)_100%),linear-gradient(0deg,rgba(8,63,59,0.88)_0%,transparent_40%)]"
       />
 
       <Container className="flex flex-1 flex-col justify-center pt-[calc(var(--spacing-nav)+1.75rem)] pb-10 sm:pb-12 [@media(max-height:620px)]:pt-[calc(var(--spacing-nav)+1rem)] [@media(max-height:620px)]:pb-6">

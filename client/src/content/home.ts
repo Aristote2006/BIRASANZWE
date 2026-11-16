@@ -26,21 +26,10 @@ export const HERO = {
  *   2. Fill in the paths below — no component changes are needed.
  */
 export const HERO_MEDIA: { video?: VideoSources; poster?: PosterSources } = {
-  video: undefined,
-  // video: {
-  //   webm: '/assets/videos/hero-1080p.webm',
-  //   mp4: '/assets/videos/hero-1080p.mp4',
-  //   webmMobile: '/assets/videos/hero-720p.webm',
-  //   mp4Mobile: '/assets/videos/hero-720p.mp4',
-  // },
+  video: {
+    webm: '/assets/videos/hero.webm',
+  },
   poster: undefined,
-  // poster: {
-  //   src: '/assets/images/hero-poster.jpg',
-  //   avif: '/assets/images/hero-poster.avif',
-  //   webp: '/assets/images/hero-poster.webp',
-  //   width: 1920,
-  //   height: 1080,
-  // },
 }
 
 /* --------------------------------------------------------------------------
