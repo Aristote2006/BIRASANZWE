@@ -1,6 +1,5 @@
 import { HeroSection } from '@/components/sections/HeroSection'
 import { LeaderMessage } from '@/components/sections/LeaderMessage'
-import { FeaturedProject } from '@/components/sections/FeaturedProject'
 import { ImpactPreview } from '@/components/sections/ImpactPreview'
 import { PartnersMarquee } from '@/components/sections/PartnersMarquee'
 import { FAQAccordion } from '@/components/sections/FAQAccordion'
@@ -9,9 +8,9 @@ import { usePageMeta } from '@/hooks/usePageMeta'
 
 export default function Home() {
   usePageMeta({
-    title: 'Birasanzwe Initiative | Disability Is Not Inability',
+    title: 'Birasanzwe Initiative | Aspire to Include',
     description:
-      'Birasanzwe Initiative promotes inclusion, talent, dignity, and opportunities for people with disabilities in Rwanda. Every talent deserves a platform.',
+      'Birasanzwe Initiative promotes inclusion, talent, dignity, and opportunities for people with disabilities, people with chronic diseases, and vulnerable communities in Rwanda.',
     path: '/',
     robots: 'index, follow, max-image-preview:large',
   })
@@ -20,7 +19,6 @@ export default function Home() {
     <>
       <HeroSection />
       <LeaderMessage />
-      <FeaturedProject />
       <ImpactPreview />
       <PartnersMarquee />
       <FAQAccordion />

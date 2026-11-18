@@ -39,22 +39,13 @@ export function LeaderMessage() {
         {/* Message */}
         <div className="lg:col-span-7">
           <Reveal>
-            <p className="eyebrow inline-flex items-center gap-3 text-teal">
+            <h2 id="leader-title" className="eyebrow inline-flex items-center gap-3 text-teal">
               <span aria-hidden="true" className="h-px w-8 bg-gold" />
               {LEADER.eyebrow}
-            </p>
-            <h2 id="leader-title" className="mt-3 font-display text-h2 font-normal text-teal-deep">
-              {LEADER.heading}
             </h2>
           </Reveal>
 
-          <Reveal delay={0.1} className="mt-4 space-y-3.5 text-lead text-ink-muted">
-            {LEADER.message.map((p) => (
-              <p key={p.slice(0, 24)}>{p}</p>
-            ))}
-          </Reveal>
-
-          <Reveal delay={0.2} as="figure" className="relative mt-6 overflow-hidden rounded-2xl bg-teal-50 p-5 sm:p-6">
+          <Reveal delay={0.1} as="figure" className="relative mt-5 overflow-hidden rounded-2xl bg-teal-50 p-6 sm:p-8">
             <Quote aria-hidden="true" className="absolute top-4 right-5 size-12 rotate-180 text-gold/30 sm:size-14" strokeWidth={1} />
             <span aria-hidden="true" className="block font-quote text-4xl leading-none text-gold">“</span>
             <blockquote className="relative -mt-3">

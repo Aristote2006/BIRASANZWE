@@ -15,8 +15,8 @@ export const HERO = {
   empoweredBy: 'Empowered by BAHO AFRICA',
   titleLines: ['ASPIRE', 'TO INCLUDE.'] as const,
   supporting: ['Every talent deserves a platform.', 'Every ability deserves recognition.'] as const,
-  primaryCta: { label: 'Explore Our Projects', to: '#featured-project' },
-  secondaryCta: { label: 'Discover Our Mission', to: '#mission' },
+  primaryCta: { label: 'Explore Our Projects', to: '/projects' },
+  secondaryCta: { label: 'Discover Our Mission', to: '/about' },
   pillars: ['Talent', 'Dignity', 'Opportunity'] as const,
 }
 
