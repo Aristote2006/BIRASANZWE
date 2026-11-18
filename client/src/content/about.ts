@@ -7,11 +7,10 @@
  */
 
 export const ABOUT_SEO = {
-  title: 'About Birasanzwe Initiative | Our Story, Mission & Vision',
+  title: 'About Birasanzwe Initiative | Aspire to Include',
   description:
-    'Discover Birasanzwe Initiative, our story, mission, vision, and commitment to inclusion, talent recognition, and opportunities for persons with disabilities in Rwanda.',
+    'Discover Birasanzwe Initiative, our story, mission, vision, and commitment to inclusion, dignity, and opportunities for people with disabilities, people with chronic diseases, and vulnerable communities in Rwanda.',
   path: '/about',
-  /** Uses the official Rwanda Tour WebP image as the current social preview; replace with a dedicated 1200×630 OG image when available. */
   ogImage: '/assets/images/tour.webp',
 } as const
 
@@ -24,9 +23,9 @@ export const ABOUT_HERO = {
     { label: 'About Us', to: '/about' },
   ] as const,
   eyebrow: 'ABOUT BIRASANZWE INITIATIVE',
-  titleLines: ['MORE THAN INCLUSION.', 'A MOVEMENT OF POSSIBILITY.'] as const,
+  titleLines: ['ASPIRE TO INCLUDE.', 'A MOVEMENT OF DIGNITY.'] as const,
   supporting:
-    'We believe every person deserves the opportunity to express their abilities, discover their potential, and contribute meaningfully to society.',
+    'We promote inclusion, dignity, talent recognition, and equal participation for people with disabilities, people with chronic diseases, and vulnerable people facing illness, poverty, or circumstances that can lead to exclusion.',
 } as const
 
 /* --------------------------------------------------------------------------
@@ -35,45 +34,37 @@ export const ABOUT_HERO = {
 export const ABOUT_STORY = {
   eyebrow: 'OUR STORY',
   heading: 'A BELIEF THAT BECAME A PURPOSE.',
-  /**
-   * PROVISIONAL COPY — Official story placeholder.
-   * Replace or expand with confirmed narrative from Birasanzwe Initiative leadership.
-   */
   provisionalLead:
-    '“Birasanzwe Initiative is built on a simple but powerful belief: disability does not define a person’s ability, talent, or potential. We exist to create opportunities where abilities can be recognized, talents can be expressed, and inclusion can become a lived experience.”',
+    '“Birasanzwe Initiative is built on a clear human truth: disability, chronic illness, and poverty are normal human conditions that should never result in stigma, exclusion, or discrimination. Guided by our message — Aspire to Include — we create platforms where abilities are celebrated, vulnerable communities are supported, and inclusion becomes a lived reality.”',
   body: [
-    'Across Rwanda, persons with disabilities hold extraordinary creative, artistic, intellectual, and entrepreneurial gifts. Yet too often, assumptions and barriers stand between those abilities and the platforms where they can shine.',
-    'Birasanzwe Initiative was shaped to change that conversation — shifting attention away from limitation or pity and placing it squarely on human dignity, capability, and equal opportunity. Through community-rooted platforms, public engagement, and collaborative partnerships, we work so every talent can be seen on its own merit.',
+    'Across Rwanda, people with disabilities, people living with chronic diseases, and vulnerable individuals facing illness, poverty, or marginalizing circumstances hold extraordinary creative, artistic, and human potential. Yet stigma and social barriers too often stand between them and full participation in society.',
+    'Birasanzwe Initiative was founded to transform that reality — combining artistic advocacy, music, storytelling, and practical community support to challenge stigma, uphold human dignity, and bring communities together in compassion and shared responsibility.',
   ],
   pullQuote: {
-    text: 'Every talent deserves a platform. Every ability deserves recognition.',
+    text: 'Aspire to Include — every talent deserves a platform, and no human condition should ever lead to exclusion.',
     attribution: 'Core Conviction · Birasanzwe Initiative',
   },
-  /**
-   * Conceptual journey stages (non-dated, non-fabricated milestones).
-   * Ready to be updated with official dates or historical milestones when confirmed.
-   */
   journey: [
     {
       step: '01',
       phase: 'The Conviction',
-      title: 'Seeing ability first',
+      title: 'Challenging stigma & exclusion',
       description:
-        'Challenging assumptions around disability in Rwanda by affirming that human potential is never defined by physical or sensory differences.',
+        'Affirming that disability, chronic diseases, illness, and poverty are normal human conditions that must never lead to discrimination or exclusion.',
     },
     {
       step: '02',
       phase: 'The Platform',
-      title: 'Creating spaces for expression',
+      title: 'Artistic advocacy & practical support',
       description:
-        'Designing initiatives — such as the Birasanzwe Rwanda Tour — where persons with disabilities step forward as artists, leaders, and contributors.',
+        'Using music, storytelling, cultural expression, and charitable community support — such as the Birasanzwe Rwanda Tour — to uplift talents and vulnerable groups.',
     },
     {
       step: '03',
       phase: 'The Movement',
-      title: 'Growing collective inclusion',
+      title: 'Aspiring to include everyone',
       description:
-        'Bringing communities, partner organizations, and supporters together to turn inclusion from an ideal into an everyday reality.',
+        'Mobilizing communities, local leaders, and partner organizations across Rwanda to practice compassion, social responsibility, and equal participation.',
     },
   ] as const,
 } as const
@@ -83,21 +74,21 @@ export const ABOUT_STORY = {
  * ------------------------------------------------------------------------ */
 export const ABOUT_MISSION = {
   eyebrow: 'OUR MISSION',
-  headingLines: ['CREATING OPPORTUNITIES.', 'CELEBRATING ABILITY.'] as const,
+  headingLines: ['ASPIRE TO INCLUDE.', 'CELEBRATING HUMAN DIGNITY.'] as const,
   statement:
-    'To promote inclusion, recognize the talents and abilities of persons with disabilities, and create meaningful opportunities for participation, expression, and contribution within society.',
+    'To promote an inclusive and compassionate society by recognizing talents, challenging stigma, and supporting people with disabilities, people with chronic diseases, and vulnerable people facing illness, poverty, and other circumstances that can lead to exclusion.',
   pillars: [
     {
       label: 'What We Do',
-      detail: 'Open doors for participation, creative expression, and visible leadership.',
+      detail: 'Combine artistic advocacy, talent platforms, awareness dialogues, and practical support for vulnerable communities.',
     },
     {
       label: 'Who We Serve',
-      detail: 'Persons with disabilities across Rwanda whose talents deserve recognition.',
+      detail: 'People with disabilities, people with chronic diseases, and vulnerable people facing illness, poverty, and other circumstances that can lead to exclusion.',
     },
     {
       label: 'How We Measure',
-      detail: 'By dignity upheld, platforms created, and communities transformed.',
+      detail: 'By stigma challenged, dignity upheld, essential support delivered, and communities united in inclusion.',
     },
   ] as const,
 } as const
@@ -107,10 +98,10 @@ export const ABOUT_MISSION = {
  * ------------------------------------------------------------------------ */
 export const ABOUT_VISION = {
   eyebrow: 'OUR VISION',
-  heading: 'A FUTURE WHERE EVERY ABILITY MATTERS.',
+  heading: 'A SOCIETY WHERE NO ONE IS EXCLUDED.',
   statement:
-    'To contribute to a society where persons with disabilities are recognized for their abilities, included in opportunities, and empowered to participate fully in community life.',
-  distinction: 'Where our mission defines our daily action, our vision defines the society we are helping build.',
+    'To build an inclusive, equitable, and compassionate Rwanda where people with disabilities, people living with chronic diseases, and vulnerable groups are respected for their dignity, recognized for their abilities, and empowered to participate fully in society.',
+  distinction: 'Where our mission defines our daily action, our vision defines the inclusive society we are building together.',
 } as const
 
 /* --------------------------------------------------------------------------
@@ -198,11 +189,11 @@ export const ABOUT_APPROACH = {
  * ------------------------------------------------------------------------ */
 export const ABOUT_PHILOSOPHY = {
   eyebrow: 'OUR PHILOSOPHY',
-  statement: 'DISABILITY IS NOT INABILITY.',
+  statement: 'ASPIRE TO INCLUDE.',
   supportingLines: [
-    'A disability does not erase talent.',
-    'A limitation does not define potential.',
-    'Every person deserves to be recognized beyond assumptions.',
+    'Disability, chronic illness, and poverty are normal human conditions — never reasons for exclusion.',
+    'People with disabilities, chronic diseases, and vulnerable circumstances deserve dignity and equal participation.',
+    'Every person deserves to be recognized, supported, and included beyond stigma.',
   ] as const,
 } as const
 
@@ -213,7 +204,7 @@ export const ABOUT_FUTURE = {
   eyebrow: 'OUR FUTURE',
   heading: 'THE FUTURE WE ARE WORKING TOWARDS.',
   message:
-    'We envision a Rwanda where talent is recognized, inclusion is practiced, and persons with disabilities have meaningful opportunities to contribute to society.',
+    'We envision a Rwanda where stigma around disability, chronic illness, and poverty is replaced by compassion, equal participation, and meaningful opportunities for every person to thrive.',
   cta: {
     label: 'EXPLORE OUR PROJECTS',
     to: '/projects',

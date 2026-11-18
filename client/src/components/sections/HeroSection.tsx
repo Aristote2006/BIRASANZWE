@@ -64,10 +64,19 @@ export function HeroSection() {
 
       <Container className="flex flex-1 flex-col justify-center pt-[calc(var(--spacing-nav)+1.75rem)] pb-10 sm:pb-12 [@media(max-height:620px)]:pt-[calc(var(--spacing-nav)+1rem)] [@media(max-height:620px)]:pb-6">
         <div className="max-w-4xl">
-          <p className="hero-rise eyebrow flex items-center gap-3 text-gold" style={{ animationDelay: '80ms' }}>
-            <span aria-hidden="true" className="h-px w-10 bg-gold" />
-            {HERO.eyebrow}
-          </p>
+          <div
+            className="hero-rise flex flex-wrap items-center gap-3 sm:gap-4"
+            style={{ animationDelay: '80ms' }}
+          >
+            <p className="eyebrow flex items-center gap-3 text-gold">
+              <span aria-hidden="true" className="h-px w-10 bg-gold" />
+              {HERO.eyebrow}
+            </p>
+            <span className="inline-flex items-center gap-2 rounded-full border border-gold/45 bg-gold/12 px-3.5 py-1 text-[0.7rem] font-extrabold tracking-[0.16em] text-gold uppercase backdrop-blur-xs">
+              <span aria-hidden="true" className="size-1.5 rounded-full bg-gold" />
+              {HERO.empoweredBy}
+            </span>
+          </div>
 
           {/* LCP element: rendered immediately, never hidden behind JS animation. */}
           <h1

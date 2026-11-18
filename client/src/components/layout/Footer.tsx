@@ -1,6 +1,6 @@
 import { Link } from 'react-router'
 import { Mail, MapPin, Phone } from 'lucide-react'
-import { NAV_ITEMS, SITE, SUPPORT_LINK } from '@/lib/site'
+import { NAV_ITEMS, SITE, SOCIAL_LINKS, SUPPORT_LINK } from '@/lib/site'
 import { Container } from '@/components/ui/Container'
 import { Logo } from '@/components/ui/Logo'
 import { SmartLink } from '@/components/ui/SmartLink'
@@ -19,13 +19,16 @@ const INVOLVED_LINKS = [
   { label: SUPPORT_LINK.label, to: SUPPORT_LINK.to },
 ]
 
-/** TODO(content): add official profile URLs; empty href = placeholder (rendered as non-link). */
+/**
+ * Social media links — replace each `href` below (or in `SOCIAL_LINKS` in `src/lib/site.ts`)
+ * with your official social media profile URLs.
+ */
 const SOCIALS = [
-  { label: 'Facebook', href: '', Icon: FacebookIcon },
-  { label: 'Instagram', href: '', Icon: InstagramIcon },
-  { label: 'X (Twitter)', href: '', Icon: XIcon },
-  { label: 'YouTube', href: '', Icon: YouTubeIcon },
-  { label: 'LinkedIn', href: '', Icon: LinkedInIcon },
+  { label: 'Facebook', href: SOCIAL_LINKS.facebook, Icon: FacebookIcon },
+  { label: 'Instagram', href: SOCIAL_LINKS.instagram, Icon: InstagramIcon },
+  { label: 'X (Twitter)', href: SOCIAL_LINKS.x, Icon: XIcon },
+  { label: 'YouTube', href: SOCIAL_LINKS.youtube, Icon: YouTubeIcon },
+  { label: 'LinkedIn', href: SOCIAL_LINKS.linkedin, Icon: LinkedInIcon },
 ]
 
 function FooterHeading({ children, id }: { children: string; id?: string }) {
@@ -116,28 +119,18 @@ export function Footer() {
             </li>
           </ul>
 
-          <ul className="mt-5 flex flex-wrap gap-2" aria-label="Social media (coming soon)">
+          <ul className="mt-5 flex flex-wrap gap-2" aria-label="Social media">
             {SOCIALS.map(({ label, href, Icon }) => (
               <li key={label}>
-                {href ? (
-                  <a
-                    href={href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`${label} (opens in a new tab)`}
-                    className="grid size-11 place-items-center rounded-full border border-white/20 text-white/80 transition-colors duration-300 hover:border-gold hover:bg-gold hover:text-teal-deep"
-                  >
-                    <Icon className="size-4" />
-                  </a>
-                ) : (
-                  <span
-                    title={`${label} — coming soon`}
-                    className="grid size-11 place-items-center rounded-full border border-white/15 text-white/60"
-                  >
-                    <Icon className="size-4" />
-                    <span className="sr-only">{label} — coming soon</span>
-                  </span>
-                )}
+                <a
+                  href={href || '#'}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`${label} (opens in a new tab)`}
+                  className="grid size-11 place-items-center rounded-full border border-white/20 text-white/80 transition-colors duration-300 hover:border-gold hover:bg-gold hover:text-teal-deep"
+                >
+                  <Icon className="size-4" />
+                </a>
               </li>
             ))}
           </ul>
@@ -154,7 +147,7 @@ export function Footer() {
             rel="noopener noreferrer"
             className="font-satisfy inline-block text-sm tracking-wide text-on-dark-muted/85 transition-colors duration-300 hover:text-gold"
           >
-            Developed by Aristote
+            Developed by BAHO CREATIVES
           </a>
 
           <ul className="flex items-center gap-6">

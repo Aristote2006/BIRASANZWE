@@ -6,10 +6,10 @@
 export const SITE = {
   name: 'Birasanzwe Initiative',
   shortName: 'Birasanzwe',
-  slogan: 'Disability is not inability.',
+  slogan: 'Aspire to Include.',
   supporting: ['Every talent deserves a platform.', 'Every ability deserves recognition.'],
   mission:
-    'Promoting inclusion, talent, dignity, and opportunities for people with disabilities in Rwanda.',
+    'Promoting inclusion, dignity, talent, and equal participation for people with disabilities, people living with chronic diseases, and vulnerable people facing illness, poverty, or other circumstances that can lead to exclusion.',
   /** TODO(SEO): official production URL. Can be set via VITE_SITE_URL. */
   url: (import.meta.env.VITE_SITE_URL as string | undefined) || 'https://www.example.org',
   /** Official phone / WhatsApp number for Birasanzwe Initiative (+250 790 378 355). */
@@ -21,6 +21,17 @@ export const SITE = {
   email: (import.meta.env.VITE_CONTACT_EMAIL as string | undefined) || 'birasanzweinitiative@gmail.com',
   emailFallbackLabel: 'birasanzweinitiative@gmail.com',
   address: 'KG 17 Ave, Kigali',
+} as const
+
+/**
+ * Official social media links — replace each URL below with your platform link.
+ */
+export const SOCIAL_LINKS = {
+  facebook: 'https://facebook.com/',
+  instagram: 'https://www.instagram.com/hirya_yejo?cnvx=ZXRpeG9hNjJ0czdv',
+  x: 'https://x.com/',
+  youtube: ' https://youtube.com/@birasanzweinitiative?si=EnkVYwHvosDOsUbJ',
+  linkedin: 'https://linkedin.com/',
 } as const
 
 export interface NavChild {

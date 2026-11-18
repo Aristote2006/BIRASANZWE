@@ -24,7 +24,7 @@ export const GET_INVOLVED_HERO = {
   heading: 'GET INVOLVED',
   headline: 'Your Participation Can Change a Life.',
   description:
-    'We invite individuals, organizations, and communities across Rwanda and beyond to join BIRASANZWE INITIATIVE in promoting inclusion, celebrating ability, and recognizing extraordinary talents.',
+    'We invite individuals, organizations, and communities across Rwanda and beyond to join BIRASANZWE INITIATIVE in promoting inclusion, celebrating talent, and supporting people with disabilities, people with chronic diseases, and vulnerable groups facing illness, poverty, or exclusion.',
 } as const
 
 /* --------------------------------------------------------------------------

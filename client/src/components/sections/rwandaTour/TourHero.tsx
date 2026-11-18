@@ -15,12 +15,23 @@ export function TourHero() {
   return (
     <section
       aria-labelledby="tour-hero-heading"
-      className="relative isolate flex min-h-[82svh] flex-col justify-between overflow-hidden bg-teal-deep text-white"
+      className="relative isolate flex min-h-[72svh] flex-col justify-between overflow-hidden bg-teal-deep text-white"
     >
-      {/* Subtle radial illumination */}
+      {/* Background photograph */}
+      <img
+        src="/assets/images/tour.webp"
+        alt=""
+        aria-hidden="true"
+        loading="eager"
+        fetchPriority="high"
+        decoding="async"
+        className="absolute inset-0 -z-20 h-full w-full object-cover object-center"
+      />
+
+      {/* Editorial deep-teal gradient overlay */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 -z-10 bg-[radial-gradient(65%_55%_at_85%_20%,rgba(15,118,110,0.62),transparent_70%),radial-gradient(45%_45%_at_10%_95%,rgba(244,196,48,0.11),transparent_70%)]"
+        className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(8,63,59,0.92)_0%,rgba(8,63,59,0.75)_55%,rgba(8,63,59,0.42)_100%),linear-gradient(0deg,rgba(8,63,59,0.94)_0%,transparent_45%)]"
       />
 
       {/* Decorative edition rings */}

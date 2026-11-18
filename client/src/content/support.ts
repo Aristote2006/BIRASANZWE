@@ -22,7 +22,7 @@ export const SUPPORT_HERO = {
   heading: 'SUPPORT OUR MISSION',
   headline: 'Together, We Create Opportunities.',
   description:
-    'Everyone can help promote inclusion, recognize talents, and create meaningful opportunities for persons with disabilities across Rwanda.',
+    'Everyone can help promote inclusion, recognize talents, and provide practical support and opportunities for people with disabilities, people living with chronic diseases, and vulnerable communities facing illness, poverty, or exclusion across Rwanda.',
 } as const
 
 /* --------------------------------------------------------------------------

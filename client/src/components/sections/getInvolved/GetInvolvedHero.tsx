@@ -14,11 +14,23 @@ export function GetInvolvedHero() {
   return (
     <section
       aria-labelledby="get-involved-hero-title"
-      className="relative isolate flex min-h-[68svh] flex-col justify-center overflow-hidden bg-teal-deep pt-[calc(var(--spacing-nav)+2rem)] pb-12 text-white sm:pb-16"
+      className="relative isolate flex min-h-[66svh] flex-col justify-center overflow-hidden bg-teal-deep pt-[calc(var(--spacing-nav)+2rem)] pb-12 text-white sm:pb-16"
     >
+      {/* Background photograph */}
+      <img
+        src="/assets/images/tour8.webp"
+        alt=""
+        aria-hidden="true"
+        loading="eager"
+        fetchPriority="high"
+        decoding="async"
+        className="absolute inset-0 -z-20 h-full w-full object-cover object-center"
+      />
+
+      {/* Editorial deep-teal gradient overlay */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 -z-10 bg-[radial-gradient(65%_55%_at_85%_20%,rgba(15,118,110,0.62),transparent_70%),radial-gradient(45%_45%_at_10%_95%,rgba(244,196,48,0.10),transparent_70%)]"
+        className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(8,63,59,0.92)_0%,rgba(8,63,59,0.76)_55%,rgba(8,63,59,0.45)_100%),linear-gradient(0deg,rgba(8,63,59,0.94)_0%,transparent_45%)]"
       />
 
       <svg

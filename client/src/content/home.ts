@@ -11,8 +11,9 @@ import type { PosterSources, VideoSources } from '@/components/ui/VideoBackgroun
  * HERO
  * ------------------------------------------------------------------------ */
 export const HERO = {
-  eyebrow: 'Birasanzwe Initiative · Rwanda',
-  titleLines: ['DISABILITY IS', 'NOT INABILITY.'] as const,
+  eyebrow: 'Birasanzwe Initiative',
+  empoweredBy: 'Empowered by BAHO AFRICA',
+  titleLines: ['ASPIRE', 'TO INCLUDE.'] as const,
   supporting: ['Every talent deserves a platform.', 'Every ability deserves recognition.'] as const,
   primaryCta: { label: 'Explore Our Projects', to: '#featured-project' },
   secondaryCta: { label: 'Discover Our Mission', to: '#mission' },
@@ -37,35 +38,29 @@ export const HERO_MEDIA: { video?: VideoSources; poster?: PosterSources } = {
  * ------------------------------------------------------------------------ */
 export const LEADER = {
   eyebrow: 'A Message from Our Leadership',
-  name: 'Mugara',
-  /** PLACEHOLDER — confirm the official leadership title. */
-  title: 'Initiative Leader',
+  name: 'AUBEA MUGAARA (NEZERWA UKWISHATSE)',
+  title: 'Artist & Initiative Leader',
   /** Official portrait of Mugara. */
   portrait: {
     src: '/assets/images/Mugara.webp',
     width: 742,
     height: 852,
   },
-  heading: 'Building a Rwanda where every ability is seen.',
-  /**
-   * PLACEHOLDER — introductory message drafted from the initiative's stated values.
-   * Replace with Mugara's official message.
-   */
+  heading: 'Building an inclusive Rwanda where every person belongs.',
   message: [
-    'Birasanzwe Initiative stands on a simple conviction: a disability does not define what a person can achieve. Across Rwanda, there are artists, performers, athletes, creators and entrepreneurs whose abilities deserve to be seen, celebrated and given room to grow.',
-    'Our work is about creating that room — platforms where talent is recognised on its own merit, where dignity comes first, and where opportunity is open to everyone. We warmly invite you to walk this journey with us.',
+    'Birasanzwe Initiative stands on a simple conviction: disability, chronic illness, poverty, or any vulnerable circumstance are normal human conditions that should never result in exclusion or discrimination. Across Rwanda, people with disabilities, people living with chronic diseases, and vulnerable communities hold extraordinary talents and dignity that deserve recognition, compassion, and equal participation.',
   ],
   /** Uses the initiative's official slogan and supporting message. */
   quote:
-    'Disability is not inability. Every talent deserves a platform, and every ability deserves recognition.',
+    'If you can practice something than someone, They can also practice something than you, The nature is balanced nothing abnormal!',
 }
 
 /* --------------------------------------------------------------------------
  * FEATURED PROJECT
  * ------------------------------------------------------------------------ */
 export const FEATURED_PROJECT = {
-  eyebrow: 'Featured Project',
-  title: 'Birasanzwe Rwanda Tour',
+  eyebrow: 'Featured Project · August 2026',
+  title: 'Birasanzwe Rwanda Tour 2026',
   edition: 'Edition 1',
   to: '/projects/birasanzwe-rwanda-tour-edition-1',
   /** Official featured project image. */
@@ -73,17 +68,27 @@ export const FEATURED_PROJECT = {
     src: '/assets/images/tour.webp',
     width: 1600,
     height: 1066,
-    alt: 'Birasanzwe Rwanda Tour — Edition 1',
+    alt: 'Birasanzwe Rwanda Tour 2026 — Edition 1',
   },
-  /** PLACEHOLDER — official project description. */
   description:
-    'The Birasanzwe Rwanda Tour is our flagship journey to celebrate talent and ability. Full details of the first edition — locations, dates and programme — will be shared here soon.',
-  /** PLACEHOLDER — qualitative highlights, to be confirmed with the project team. */
+    'Led by Rwandan artist and inclusion advocate Aubea Mugaara, BIRASANZWE Rwanda Tour is a nationwide advocacy and community engagement initiative using music, storytelling, and cultural expression across Musanze, Rubavu, Nyanza, Bugesera, and Kigali City to challenge stigma around disability, chronic illness, and poverty.',
   highlights: [
-    { title: 'Showcasing talent', text: 'Creating stages where people with disabilities lead and shine.' },
-    { title: 'Across Rwanda', text: 'Bringing the message of ability closer to communities.' },
-    { title: 'Recognising ability', text: 'Celebrating achievement on its own merit — never out of pity.' },
-    { title: 'Building connections', text: 'Linking talent with audiences, partners and opportunity.' },
+    {
+      title: 'Artistic Advocacy',
+      text: 'Live music performances, storytelling, and advocacy concerts challenging stigma and exclusion.',
+    },
+    {
+      title: '5 Stops Across Rwanda',
+      text: 'Reaching Musanze, Rubavu, Nyanza, Bugesera, and concluding with a Grand Finale Concert in Kigali City.',
+    },
+    {
+      title: 'Community Support',
+      text: 'Supporting vulnerable communities through distribution of hygiene kits and essential items.',
+    },
+    {
+      title: 'Equal Participation',
+      text: 'Inspiring compassion, social responsibility, and inclusion for people with disabilities, chronic illnesses, and vulnerable groups.',
+    },
   ],
 }
 
@@ -165,25 +170,22 @@ export const PARTNERS: Partner[] = [
 export const FAQS = [
   {
     q: 'What is Birasanzwe Initiative?',
-    a: 'Birasanzwe Initiative is a Rwandan initiative that promotes inclusion, talent, dignity and opportunities for people with disabilities. We believe every talent deserves a platform and every ability deserves recognition.',
+    a: 'Birasanzwe Initiative is a Rwandan advocacy and community engagement initiative that promotes inclusion, dignity, talent recognition, and practical support for people with disabilities, people living with chronic diseases, and vulnerable people facing illness, poverty, or other circumstances that can lead to exclusion.',
   },
   {
-    q: 'What does “Disability Is Not Inability” mean?',
-    a: 'It means that a disability does not define what a person is capable of. Our message puts talent, ability and potential first — celebrating people for what they can do and create, rather than viewing them through pity or limitation.',
+    q: 'What does “Aspire to Include” mean?',
+    a: '“Aspire to Include” is our call to recognize that disability, chronic illness, and poverty are normal human conditions that should never result in stigma, exclusion, or discrimination. We champion equal participation, compassion, and platforms where every person’s talent and dignity are respected.',
   },
   {
-    q: 'Who can participate in Birasanzwe projects?',
-    // PLACEHOLDER — confirm official participation criteria.
-    a: 'Our projects are designed to give people with disabilities a platform to share their talents. Participation details for each project will be announced on this website. In the meantime, please contact us to express your interest.',
+    q: 'Who does Birasanzwe Initiative serve and include?',
+    a: 'We serve and stand alongside people with disabilities, people living with chronic diseases, and vulnerable individuals or communities facing illness, poverty, and other circumstances that can lead to social exclusion.',
   },
   {
-    q: 'How can I become a partner or volunteer?',
-    // PLACEHOLDER — confirm official partnership / volunteer process.
-    a: 'We welcome organisations and individuals who share our values. Use the contact form below and select “Become a Partner” or “Volunteer” — your message will be sent to our team via WhatsApp.',
+    q: 'What is the Birasanzwe Rwanda Tour 2026?',
+    a: 'Led by Rwandan artist and inclusion advocate Aubea Mugaara, Birasanzwe Rwanda Tour 2026 is a nationwide initiative combining live music, storytelling, awareness sessions, and distribution of hygiene kits and essential items across Musanze, Rubavu, Nyanza, Bugesera, and a Grand Finale Concert in Kigali City.',
   },
   {
-    q: 'How can I support Birasanzwe Initiative?',
-    // PLACEHOLDER — official donation / support channels to be added.
-    a: 'You can support a project, volunteer your time and skills, become a partner or help spread our message. Official support and donation channels will be published soon — for now, reach out through the contact form below.',
+    q: 'How can I become a partner, volunteer, or supporter?',
+    a: 'We welcome partners through financial support, venue provision, production support, equipment sponsorship, media partnerships, and community outreach collaboration. Use the contact form below or reach us directly on WhatsApp at +250 790 378 355.',
   },
 ]

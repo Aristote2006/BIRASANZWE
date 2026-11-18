@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { useInView } from 'motion/react'
-import { Award, FolderCheck, Globe2, HeartHandshake, type LucideIcon } from 'lucide-react'
+import { FolderCheck, Globe2, HeartHandshake, type LucideIcon } from 'lucide-react'
 import { IMPACT_STATS, IMPACT_STATS_HEADER, type ImpactStatItem } from '@/content/impact'
 import { useMediaQuery } from '@/hooks/useMediaQuery'
 import { Container } from '@/components/ui/Container'
@@ -9,7 +9,6 @@ import { RevealGroup, RevealItem } from '@/components/ui/RevealAnimation'
 
 const STAT_ICONS: Record<ImpactStatItem['id'], LucideIcon> = {
   communities: Globe2,
-  talents: Award,
   projects: FolderCheck,
   lives: HeartHandshake,
 }
@@ -94,10 +93,10 @@ export function ImpactStatsSection() {
           <RevealGroup
             as="ul"
             stagger={0.1}
-            className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4"
+            className="grid gap-5 sm:grid-cols-3"
           >
             {IMPACT_STATS.map((stat, index) => {
-              const Icon = STAT_ICONS[stat.id] ?? Award
+              const Icon = STAT_ICONS[stat.id] ?? Globe2
               return (
                 <RevealItem as="li" key={stat.id}>
                   <article className="group relative flex h-full flex-col justify-between overflow-hidden rounded-3xl border border-teal-100 bg-white p-6 shadow-[0_18px_40px_-28px_rgba(8,63,59,0.28)] transition-[border-color,box-shadow,transform] duration-400 ease-premium hover:-translate-y-1 hover:border-gold/75 hover:shadow-[0_24px_48px_-24px_rgba(8,63,59,0.4)] sm:p-7">

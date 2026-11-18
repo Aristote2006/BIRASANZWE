@@ -29,60 +29,52 @@ export const PROJECTS_HERO = {
 } as const
 
 /* --------------------------------------------------------------------------
- * SECTION 2 — FEATURED PROJECT: BIRASANZWE RWANDA TOUR — EDITION 1
+ * SECTION 2 — FEATURED PROJECT: BIRASANZWE RWANDA TOUR 2026 — EDITION 1
  * ------------------------------------------------------------------------ */
 export const RWANDA_TOUR_SHOWCASE = {
-  label: 'FEATURED PROJECT',
-  title: 'BIRASANZWE RWANDA TOUR',
+  label: 'FEATURED PROJECT · AUGUST 2026',
+  title: 'BIRASANZWE RWANDA TOUR 2026',
   edition: 'EDITION 1',
   status: 'Featured' as const,
   category: 'Talent & Creativity' as const,
   detailRoute: '/projects/birasanzwe-rwanda-tour-edition-1',
   ctaLabel: 'DISCOVER THE PROJECT',
-  /**
-   * PROVISIONAL COPY — Official project description placeholder.
-   * Easy to replace once the official project brief is finalized.
-   */
   introduction:
-    '“Birasanzwe Rwanda Tour is a platform designed to showcase the talents, creativity, and abilities of persons with disabilities. Through artistic expression and meaningful participation, the project celebrates potential, challenges limiting perceptions, and promotes a more inclusive society.”',
+    '“BIRASANZWE Rwanda Tour is a nationwide advocacy and community engagement initiative led by Rwandan artist and inclusion advocate Aubea Mugaara. Using music, storytelling, and cultural expression across Musanze, Rubavu, Nyanza, Bugesera, and Kigali City, the tour challenges stigma associated with disability, chronic illness, and poverty while providing practical support to vulnerable communities.”',
   quote: {
-    text: 'When talent is given a stage, assumptions give way to recognition.',
-    caption: 'Birasanzwe Rwanda Tour · Edition 1',
+    text: 'Disability, illness, and poverty are normal human conditions that should never result in exclusion or discrimination.',
+    caption: 'Birasanzwe Rwanda Tour 2026 · Concept Note',
   },
   media: {
     image: {
       src: '/assets/images/tour.webp',
       width: 1600,
       height: 1066,
-      alt: 'Participants and community members celebrating ability during Birasanzwe Rwanda Tour Edition 1',
+      alt: 'Participants and community members during Birasanzwe Rwanda Tour Edition 1',
     },
-    /** Optional future project video — set path (e.g. '/assets/videos/rwanda-tour.webm') when available. */
     videoWebm: undefined as string | undefined,
     videoMp4: undefined as string | undefined,
   },
-  /**
-   * Provisional thematic highlights (not claims about confirmed event schedules).
-   */
   highlights: [
     {
       key: 'discovery',
-      title: 'Talent Discovery',
-      description: 'Recognizing talents, creativity, and abilities.',
+      title: 'Live Music & Advocacy Concerts',
+      description: 'Using music, storytelling, and cultural expression across 5 districts to inspire social change.',
     },
     {
       key: 'expression',
-      title: 'Artistic Expression',
-      description: 'Creating opportunities for people to express their skills and creativity.',
+      title: 'Awareness & Inclusion Dialogues',
+      description: 'Challenging stigma around people with disabilities, chronic diseases, illness, and poverty.',
     },
     {
       key: 'inclusion',
-      title: 'Inclusion',
-      description: 'Promoting meaningful participation and recognition.',
+      title: 'Essential Community Support',
+      description: 'Distributing hygiene kits and essential support materials to vulnerable communities.',
     },
     {
       key: 'opportunity',
-      title: 'Opportunity',
-      description: 'Creating platforms where talent can be seen and appreciated.',
+      title: 'Nationwide Coverage',
+      description: 'Musanze, Rubavu, Nyanza, Bugesera, and the Grand Finale Concert in Kigali City.',
     },
   ] as const,
 } as const
@@ -131,18 +123,18 @@ export interface ProjectItem {
 export const PROJECTS_LIST: readonly ProjectItem[] = [
   {
     id: 'birasanzwe-rwanda-tour-edition-1',
-    title: 'Birasanzwe Rwanda Tour',
-    edition: 'Edition 1',
+    title: 'Birasanzwe Rwanda Tour 2026',
+    edition: 'Edition 1 · August 2026',
     description:
-      'Our flagship platform showcasing the talents, artistic expression, and abilities of persons with disabilities while fostering inclusive participation across communities.',
+      'A nationwide advocacy and community engagement tour led by Aubea Mugaara across Musanze, Rubavu, Nyanza, Bugesera, and Kigali City — using music, storytelling, and charitable support to challenge stigma around disability, chronic illness, and poverty.',
     status: 'Featured',
-    categories: ['Talent & Creativity', 'Inclusion'],
+    categories: ['Talent & Creativity', 'Inclusion', 'Community', 'Empowerment'],
     to: '/projects/birasanzwe-rwanda-tour-edition-1',
     image: {
       src: '/assets/images/tour.webp',
       width: 1600,
       height: 1066,
-      alt: 'Birasanzwe Rwanda Tour Edition 1 — celebrating talent and inclusion in Rwanda',
+      alt: 'Birasanzwe Rwanda Tour 2026 — celebrating talent and inclusion in Rwanda',
     },
   },
 ] as const

@@ -21,14 +21,14 @@ export const IMPACT_HERO = {
   heading: 'OUR IMPACT',
   headline: 'Creating Impact. Recognizing Ability. Changing Perspectives.',
   description:
-    'Birasanzwe Initiative creates meaningful opportunities, recognizes extraordinary talents, and promotes lasting inclusion and dignity for persons with disabilities across Rwanda.',
+    'Birasanzwe Initiative creates meaningful opportunities, recognizes talents, and promotes inclusion, dignity, and practical support for people with disabilities, people with chronic diseases, and vulnerable communities facing illness, poverty, or exclusion across Rwanda.',
 } as const
 
 /* --------------------------------------------------------------------------
  * SECTION 2 — ANIMATED IMPACT STATISTICS
  * ------------------------------------------------------------------------ */
 export interface ImpactStatItem {
-  id: 'communities' | 'talents' | 'projects' | 'lives'
+  id: 'communities' | 'projects' | 'lives'
   label: string
   value: number
   suffix?: string
@@ -44,30 +44,23 @@ export const IMPACT_STATS: readonly ImpactStatItem[] = [
   {
     id: 'communities',
     label: 'Communities Reached',
-    value: 12,
+    value: 32000,
     suffix: '+',
-    description: 'Communities engaged through inclusive dialogues, showcases, and outreach.',
+    description: 'Community members reached through inclusive advocacy, music showcases, and outreach across Rwanda.',
   },
   {
-    id: 'talents',
-    label: 'Talents Discovered',
-    value: 45,
+    id: 'lives',
+    label: 'Lives Impacted',
+    value: 2600,
     suffix: '+',
-    description: 'Artists, performers, and creators given a platform to share their abilities.',
+    description: 'Individuals and vulnerable community members directly supported and inspired through our initiatives.',
   },
   {
     id: 'projects',
     label: 'Projects Completed',
     value: 1,
     suffix: '',
-    description: 'Flagship initiatives launched, starting with Birasanzwe Rwanda Tour — Edition 1.',
-  },
-  {
-    id: 'lives',
-    label: 'Lives Impacted',
-    value: 500,
-    suffix: '+',
-    description: 'Participants, families, and audience members inspired to see ability first.',
+    description: 'Flagship nationwide initiatives launched, starting with Birasanzwe Rwanda Tour.',
   },
 ] as const
 
@@ -78,7 +71,7 @@ export const IMPACT_MESSAGE = {
   eyebrow: 'OUR CONVICTION',
   quote:
     'Every talent recognized is a new possibility discovered. Every opportunity created is a step toward inclusion.',
-  attribution: 'Birasanzwe Initiative · Disability Is Not Inability',
+  attribution: 'Birasanzwe Initiative · Aspire to Include',
 } as const
 
 /* --------------------------------------------------------------------------
