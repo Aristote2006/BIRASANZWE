@@ -10,8 +10,8 @@ export const SITE = {
   supporting: ['Every talent deserves a platform.', 'Every ability deserves recognition.'],
   mission:
     'Promoting inclusion, dignity, talent, and equal participation for people with disabilities, people living with chronic diseases, and vulnerable people facing illness, poverty, or other circumstances that can lead to exclusion.',
-  /** TODO(SEO): official production URL. Can be set via VITE_SITE_URL. */
-  url: (import.meta.env.VITE_SITE_URL as string | undefined) || 'https://www.example.org',
+  /** Official production URL. Can be overridden via VITE_SITE_URL. */
+  url: (import.meta.env.VITE_SITE_URL as string | undefined) || 'https://birasanzweinitiative.com',
   /** Official phone / WhatsApp number for Birasanzwe Initiative (+250 790 378 355). */
   phoneDisplay: '+250 790 378 355',
   whatsappNumber: (
